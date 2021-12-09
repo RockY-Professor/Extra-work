@@ -2,13 +2,14 @@
 using namespace std;
 
 int main() {
-    int i, space, rows, k = 0;
+    int i, space, rows;
     rows = 5;
-    for (i = 1; i <= rows; ++i, k = 0) {
-        for (space = 1; space <= rows - i; ++space) {
+    for (i = 1; i <= rows; ++i) {                //Run loop for 5 rows.
+        for (space = rows; space > i ; space--) {   // Print Empty spaces
             cout << "  ";
         }
-        for (; k != 2 * i - 1;) {
+        int k = 0;
+        while ( k != 2 * i - 1) {                      // Print Required number of Stars.
             cout << "* ";
             ++k;
         }
